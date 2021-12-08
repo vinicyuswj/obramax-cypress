@@ -1,0 +1,8 @@
+{
+  "baseUrl": "https://homolog.obramax.com.br/",
+  "viewportWidth": 1280,
+  "viewportHeight": 800,
+  "experimentalStudio": true,
+  "projectId": "wecsyz",
+  "defaultCommandTimeout": 5000
+}
