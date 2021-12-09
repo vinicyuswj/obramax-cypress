@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 3,
     "failures": -2,
-    "start": "2021-12-09T12:16:03.383Z",
-    "end": "2021-12-09T12:16:03.415Z",
-    "duration": 32,
+    "start": "2021-12-09T12:29:28.379Z",
+    "end": "2021-12-09T12:29:28.451Z",
+    "duration": 72,
     "testsRegistered": 3,
     "passPercent": null,
     "pendingPercent": 100,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "b5912013-5507-495f-97da-19a01a8351f9",
+      "uuid": "2b5fbbd6-add7-4e58-8803-966d6e11f169",
       "title": "",
       "fullFile": "cypress/integration/registrationCustomerCompany.spec.js",
       "file": "cypress/integration/registrationCustomerCompany.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c26b6c87-12dd-4288-835f-36146db5d8b0",
+          "uuid": "c1c04dbb-ca63-4644-92e5-3ef06c9dfae0",
           "title": "Registration Customer Company",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "4f84a88c-e0ef-4cf2-a857-bc9a60c468ea",
-              "parentUUID": "c26b6c87-12dd-4288-835f-36146db5d8b0",
+              "uuid": "0dbced34-9260-49e4-bf25-724bb88794a7",
+              "parentUUID": "c1c04dbb-ca63-4644-92e5-3ef06c9dfae0",
               "isHook": false,
               "skipped": false
             },
@@ -65,8 +65,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "e7fc0901-3fa5-4d0f-9a51-aa4a1bd589df",
-              "parentUUID": "c26b6c87-12dd-4288-835f-36146db5d8b0",
+              "uuid": "e41b474c-dbab-44ec-babb-0de6e9c785fc",
+              "parentUUID": "c1c04dbb-ca63-4644-92e5-3ef06c9dfae0",
               "isHook": false,
               "skipped": false
             },
@@ -83,8 +83,8 @@
               "context": null,
               "code": "",
               "err": {},
-              "uuid": "e8b11fe5-684f-4c23-907e-be4608b15518",
-              "parentUUID": "c26b6c87-12dd-4288-835f-36146db5d8b0",
+              "uuid": "9776eac8-82c5-4487-aa84-f5f025e12768",
+              "parentUUID": "c1c04dbb-ca63-4644-92e5-3ef06c9dfae0",
               "isHook": false,
               "skipped": false
             }
@@ -93,9 +93,9 @@
           "passes": [],
           "failures": [],
           "pending": [
-            "4f84a88c-e0ef-4cf2-a857-bc9a60c468ea",
-            "e7fc0901-3fa5-4d0f-9a51-aa4a1bd589df",
-            "e8b11fe5-684f-4c23-907e-be4608b15518"
+            "0dbced34-9260-49e4-bf25-724bb88794a7",
+            "e41b474c-dbab-44ec-babb-0de6e9c785fc",
+            "9776eac8-82c5-4487-aa84-f5f025e12768"
           ],
           "skipped": [],
           "duration": 0,
