@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2021-12-09T12:47:45.920Z",
-    "end": "2021-12-09T12:48:33.643Z",
-    "duration": 47723,
+    "start": "2021-12-09T12:56:49.239Z",
+    "end": "2021-12-09T12:57:41.874Z",
+    "duration": 52635,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2a530d01-8ace-4be0-ad84-a88405ae980d",
+      "uuid": "3607a492-2012-4fae-9ab4-b0aa5c2a2248",
       "title": "",
       "fullFile": "cypress/integration/registrationCustomer.spec.js",
       "file": "cypress/integration/registrationCustomer.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
+          "uuid": "5ce74b24-a4c5-4fac-97ff-330cde46424c",
           "title": "Registration Customer",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "Create Customer",
               "fullTitle": "Registration Customer Create Customer",
               "timedOut": null,
-              "duration": 18028,
+              "duration": 19790,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "const customer = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(customer);\ncy.submitForm();\ncy.successfulCreation();\ncy.clearCookies();",
               "err": {},
-              "uuid": "7681dcb7-0be3-42e7-979b-d5b937b02c61",
-              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
+              "uuid": "41a2b902-c181-4360-9e2a-c65b2ca2433a",
+              "parentUUID": "5ce74b24-a4c5-4fac-97ff-330cde46424c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Validate existing taxvat",
               "fullTitle": "Registration Customer Validate existing taxvat",
               "timedOut": null,
-              "duration": 13094,
+              "duration": 14598,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "const taxvat = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(taxvat);\ncy.validateExistTaxvat(taxvat);",
               "err": {},
-              "uuid": "40921941-7173-4814-983e-dc184ee79d34",
-              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
+              "uuid": "a18cbcd3-30e7-4896-98aa-c3843209856e",
+              "parentUUID": "5ce74b24-a4c5-4fac-97ff-330cde46424c",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Validate existing e-mail",
               "fullTitle": "Registration Customer Validate existing e-mail",
               "timedOut": null,
-              "duration": 16026,
+              "duration": 17405,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "const customer = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(customer);\ncy.validateExistEmail(customer);",
               "err": {},
-              "uuid": "a37d54ea-006d-49b4-9f08-b1e2086a1af3",
-              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
+              "uuid": "ac2f374e-7619-4692-915f-0b97e1542c15",
+              "parentUUID": "5ce74b24-a4c5-4fac-97ff-330cde46424c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "7681dcb7-0be3-42e7-979b-d5b937b02c61",
-            "40921941-7173-4814-983e-dc184ee79d34",
-            "a37d54ea-006d-49b4-9f08-b1e2086a1af3"
+            "41a2b902-c181-4360-9e2a-c65b2ca2433a",
+            "a18cbcd3-30e7-4896-98aa-c3843209856e",
+            "ac2f374e-7619-4692-915f-0b97e1542c15"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 47148,
+          "duration": 51793,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
