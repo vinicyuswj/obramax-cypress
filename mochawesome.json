@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 3,
-    "passes": 2,
+    "passes": 3,
     "pending": 0,
-    "failures": 1,
-    "start": "2021-12-09T12:27:43.286Z",
-    "end": "2021-12-09T12:28:53.456Z",
-    "duration": 70170,
+    "failures": 0,
+    "start": "2021-12-09T12:47:45.920Z",
+    "end": "2021-12-09T12:48:33.643Z",
+    "duration": 47723,
     "testsRegistered": 3,
-    "passPercent": 66.66666666666666,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "294e5a79-5e9a-4b15-b0dd-ae33fe2d89ab",
+      "uuid": "2a530d01-8ace-4be0-ad84-a88405ae980d",
       "title": "",
       "fullFile": "cypress/integration/registrationCustomer.spec.js",
       "file": "cypress/integration/registrationCustomer.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "909cb24b-0018-4f0c-b0de-ea361dbd9db0",
+          "uuid": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
           "title": "Registration Customer",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "Create Customer",
               "fullTitle": "Registration Customer Create Customer",
               "timedOut": null,
-              "duration": 21673,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 18028,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "const customer = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(customer);\ncy.submitForm();\ncy.successfulCreation();\ncy.clearCookies();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `.message-success > div`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 5000ms: Expected to find element: `.message-success > div`, but never found it.\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/support/index.js:150:36)",
-                "diff": null
-              },
-              "uuid": "38ebd7d0-9f25-4a3c-a443-6634da279855",
-              "parentUUID": "909cb24b-0018-4f0c-b0de-ea361dbd9db0",
+              "err": {},
+              "uuid": "7681dcb7-0be3-42e7-979b-d5b937b02c61",
+              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +56,7 @@
               "title": "Validate existing taxvat",
               "fullTitle": "Registration Customer Validate existing taxvat",
               "timedOut": null,
-              "duration": 21552,
+              "duration": 13094,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -69,8 +65,8 @@
               "context": null,
               "code": "const taxvat = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(taxvat);\ncy.validateExistTaxvat(taxvat);",
               "err": {},
-              "uuid": "9ba51b86-edc9-4eca-ac30-2e188dcc3379",
-              "parentUUID": "909cb24b-0018-4f0c-b0de-ea361dbd9db0",
+              "uuid": "40921941-7173-4814-983e-dc184ee79d34",
+              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +74,7 @@
               "title": "Validate existing e-mail",
               "fullTitle": "Registration Customer Validate existing e-mail",
               "timedOut": null,
-              "duration": 25712,
+              "duration": 16026,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -87,23 +83,22 @@
               "context": null,
               "code": "const customer = 'pf';\ncy.standardFormFields();\ncy.fillFormCustomer(customer);\ncy.validateExistEmail(customer);",
               "err": {},
-              "uuid": "e60aeea8-3a80-4b80-ad0e-7ae087010eec",
-              "parentUUID": "909cb24b-0018-4f0c-b0de-ea361dbd9db0",
+              "uuid": "a37d54ea-006d-49b4-9f08-b1e2086a1af3",
+              "parentUUID": "d21f4fe7-a90c-4ed1-96d1-08d4e4970fe1",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "9ba51b86-edc9-4eca-ac30-2e188dcc3379",
-            "e60aeea8-3a80-4b80-ad0e-7ae087010eec"
+            "7681dcb7-0be3-42e7-979b-d5b937b02c61",
+            "40921941-7173-4814-983e-dc184ee79d34",
+            "a37d54ea-006d-49b4-9f08-b1e2086a1af3"
           ],
-          "failures": [
-            "38ebd7d0-9f25-4a3c-a443-6634da279855"
-          ],
+          "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 68937,
+          "duration": 47148,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
