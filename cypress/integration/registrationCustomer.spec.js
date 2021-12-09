@@ -1,5 +1,5 @@
 describe('Registration Customer', () => {
-  
+
   beforeEach(() => cy.accessForm())
 
   it('Create Customer', () => {

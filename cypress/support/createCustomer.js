@@ -7,7 +7,7 @@ const customer = {
   cpf: faker.br.cpf(),
   email: faker.name.firstName()+'test123@mailinator.com',
   companyName: faker.name.lastName(),
-  stateInscription: "196357582450",
+  stateInscription: '196357582450',
   cnpj: faker.br.cnpj(),
   telefone: '11965555511',
   password: '4ut0m4c4aoCYPRESS'
