@@ -9,7 +9,9 @@
     "lint:fix": "eslint cypress/**/*.js --fix",
     "report:merge": "mochawesome-merge > index.json",
     "report:mocha": "marge index.json",
-    "report:clean": "rimraf mochawesome-report index.json"
+    "report:clean": "rimraf mochawesome-report index.json",
+    "cy:open": "npx cypress open",
+    "cy:run": "npx cypress run"
   },
   "keywords": [],
   "author": "",

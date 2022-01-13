@@ -1,28 +1,24 @@
+/// <reference types="cypress" />
+
+import customer from '../support/pages/form/index'
+
 describe('Registration Customer', () => {
 
-  beforeEach(() => cy.accessForm())
+  beforeEach(() => customer.acessForm())
 
   it('Create Customer', () => {
-    const customer = 'pf'
-
-    cy.standardFormFields()
-    cy.fillFormCustomer(customer)
-    cy.submitForm()
-    cy.successfulCreation()
+    customer.createCustomer()
+    customer.validateCreation()
     cy.clearCookies()
   })
 
   it('Validate existing taxvat', () => {
-    const taxvat = 'pf'
-    cy.standardFormFields()
-    cy.fillFormCustomer(taxvat)
-    cy.validateExistTaxvat(taxvat)
+    customer.submitExistingTaxvat()
+    customer.validateExistingTaxvat()
   })
 
-  it('Validate existing e-mail', () => {
-    const customer = 'pf'
-    cy.standardFormFields()
-    cy.fillFormCustomer(customer)
-    cy.validateExistEmail(customer)
+  it.only('Validate existing e-mail', () => {
+    customer.submitExistingEmail()
+    customer.validateExistingEmail()
   })
 })
