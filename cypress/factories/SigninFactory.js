@@ -1,10 +1,10 @@
 export default {
-    customer: function(){
+  customer: function(){
 
-        var data =  {
-            username: 'qa@creditoonline.com.br',
-            password: 'Qa#automacao2020',
-        }
-        return data
+    var data =  {
+      username: 'qa@creditoonline.com.br',
+      password: 'Qa#automacao2020',
     }
+    return data
+  }
 }

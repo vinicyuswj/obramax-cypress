@@ -1,28 +1,35 @@
+const el = require('./elements/elements').ELEMENTS
 class SigninPage {
 
-    accessLogin(){
-        cy.visit('/customer/account/login')
-    }
+  accessLogin(){
+    cy.visit('/customer/account/login')
+  }
 
-    authentication(customer){
-        cy.get('div[class="field email required"] div input[name="login[username]"]').type(customer.username)
-        cy.get('div[class="field password required"] div input[name="login[password]"]').type(customer.password)
-    }
+  waitRequest(){
+    cy.intercept(' /customer/section/**').as('login')
+    cy.wait('@login')
+  }
 
-    submit(){
-        cy.contains('button', 'Entre').click()
-    }
+  authentication(customer){
+    cy.get(el.signin.username).type(customer.password)
+    cy.get(el.signin.password).type(customer.username)
+  }
 
-    loginSuccessfully(){
-        cy.get('.page-title span[class="base"]').should('have.text', 'Minha Conta')
-    }
+  submit(){
+    cy.contains('button', 'Entre').click()
+  }
 
-    alertMessageShouldBe(message){
-        cy.get('.page .messages div div').should('have.text', message)
-    }
+  loginSuccessfully(){
+    cy.get('.page-title span[class="base"]').should('have.text', 'Minha Conta')
+  }
 
+  alertMessageShouldBe(message){
+    cy.get('.page .messages div div').should('have.text', message)
+  }
 
-
+  requiredFieldShouldBe(message){
+    cy.contains('.mage-error', message).should('be.visible')
+  }
 }
 
 export default new SigninPage()

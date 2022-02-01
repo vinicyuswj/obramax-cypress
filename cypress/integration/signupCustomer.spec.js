@@ -17,7 +17,7 @@ describe('SignUp Page Customer', () => {
     signup.alertMessageShouldBe('Obrigado por registrar-se com Obramax.')
     cy.clearCookies()
     cy.clearLocalStorage()
-  });
+  })
 
   it('Validate existing document', () => {
     var customer = signupFactory.customer()
@@ -45,30 +45,30 @@ describe('SignUp Page Customer', () => {
     signup.submit()
     signup.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.')
 
-  });
-  
+  })
+
   it('Incorrect email', () => {
     var customer = signupFactory.customer()
     customer.email = 'obramax.com.br'
-    
+
     signup.fillFormCustomer(customer)
     signup.submit()
     signup.alertInvalidRequiredField('Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).')
-  });
+  })
 
   it('Require Fields', () => {
     var customer = signupFactory.customer()
     customer.email = '  '
     customer.cpf = '   '
     customer.password = 'xxx'
-    
+
     signup.fillFormCustomer(customer)
     signup.submit()
     signup.submit()
     signup.alertInvalidRequiredField('Este campo é obrigatório.')
     signup.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.')
     signup.alertInvalidRequiredField('Este campo deve conter 8 ou mais caracteres. Espaços serão ignorados.')
-  });
+  })
 
   it('SignUp Customer Company', () => {
     var customer = signupFactory.customer()
@@ -78,7 +78,7 @@ describe('SignUp Page Customer', () => {
     signup.alertMessageShouldBe('Obrigado por registrar-se com Obramax.')
     cy.clearCookies()
     cy.clearLocalStorage()
-  });
+  })
 
   it('Validate existing taxvat', () => {
     var customer = signupFactory.customer()
