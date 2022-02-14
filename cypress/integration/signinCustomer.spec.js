@@ -16,6 +16,7 @@ describe('SignIn Page Customer', () => {
     signin.submit()
     signin.waitRequest()
     signin.loginSuccessfully()
+    signin.usernameLoggedShouldBeVisible('Olá, Usuário!')
   })
 
   it('Login with CPF', () => {
@@ -27,6 +28,7 @@ describe('SignIn Page Customer', () => {
     signin.submit()
     signin.waitRequest()
     signin.loginSuccessfully()
+    signin.usernameLoggedShouldBeVisible('Olá, Usuário!')
   })
 
   it('Login with CNPJ', () => {
@@ -38,6 +40,7 @@ describe('SignIn Page Customer', () => {
     signin.submit()
     signin.waitRequest()
     signin.loginSuccessfully()
+    signin.usernameLoggedShouldBeVisible('Olá, Usuário!')
   })
 
   it('Login with incorrect email', () => {
@@ -70,6 +73,5 @@ describe('SignIn Page Customer', () => {
     signin.authentication(customer)
     signin.submit()
     signin.requiredFieldShouldBe('Este campo é obrigatório.')
-
   })
 })

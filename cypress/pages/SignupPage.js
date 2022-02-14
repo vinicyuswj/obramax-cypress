@@ -5,14 +5,16 @@ class SignupPage {
   }
 
   fillFormCustomer(customer){
+    cy.get('input#taxvat').type(customer.cpf)
+    cy.get('select#legal_type').select('1')
+    cy.get('input#email_address').type(customer.email)
     cy.get('input#firstname').type(customer.firstName)
     cy.get('input#lastname').type(customer.lastName)
     cy.get('input[id="sms_phone"][name="sms_phone"]').type(customer.phone)
     cy.get('input#password').type(customer.password)
     cy.get('input#password-confirmation').type(customer.password)
-    cy.get('input#email_address').type(customer.email)
     cy.get('select#legal_type').select('1')
-    cy.get('input#taxvat').type(customer.cpf)
+
   }
 
   fillFormCustomerCompany(customer){

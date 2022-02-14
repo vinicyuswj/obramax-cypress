@@ -1,0 +1,261 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 3,
+    "pending": 0,
+    "failures": 5,
+    "start": "2022-02-08T14:48:15.086Z",
+    "end": "2022-02-08T14:50:08.405Z",
+    "duration": 113319,
+    "testsRegistered": 8,
+    "passPercent": 37.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "6a5155fb-c09e-484e-bc4f-62b410ce2474",
+      "title": "",
+      "fullFile": "cypress/integration/signupCustomer.spec.js",
+      "file": "cypress/integration/signupCustomer.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+          "title": "SignUp Page Customer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate existing document",
+              "fullTitle": "SignUp Page Customer Validate existing document",
+              "timedOut": null,
+              "duration": 16015,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cpf = '67251817837';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `main div[class=\"page messages\"] div div div div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `main div[class=\"page messages\"] div div div div`, but never found it.\n    at SignupPage.alertMessageShouldBe (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:322:63)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:180:25)",
+                "diff": null
+              },
+              "uuid": "6d1db265-3b62-4bea-b0d1-3bd09e92ff59",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate existing e-mail",
+              "fullTitle": "SignUp Page Customer Validate existing e-mail",
+              "timedOut": null,
+              "duration": 13540,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = 'qa@creditoonline.com.br';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Já existe uma conta com este endereço de e-mail. Se você tem certeza que é o seu endereço de e-mail,  clique aqui para obter sua senha e acessar a sua conta.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `main div[class=\"page messages\"] div div div div`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `main div[class=\"page messages\"] div div div div`, but never found it.\n    at SignupPage.alertMessageShouldBe (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:322:63)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:191:25)",
+                "diff": null
+              },
+              "uuid": "469195e7-c6e9-4205-b9be-d6339d627b4b",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Incorrect document",
+              "fullTitle": "SignUp Page Customer Incorrect document",
+              "timedOut": null,
+              "duration": 14898,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cpf = 'AAAx481255@AAAAAAA';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find content: 'O CPF/CNPJ informado não é um CPF/CNPJ válido.' within the selector: '.mage-error' but never did.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find content: 'O CPF/CNPJ informado não é um CPF/CNPJ válido.' within the selector: '.mage-error' but never did.\n    at SignupPage.alertInvalidRequiredField (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:326:41)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:202:25)",
+                "diff": null
+              },
+              "uuid": "8f13e5b6-a2fb-4206-85ac-dd09e9fbb58d",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Incorrect email",
+              "fullTitle": "SignUp Page Customer Incorrect email",
+              "timedOut": null,
+              "duration": 18384,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = 'obramax.com.br';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).');",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find content: 'Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).' within the selector: '.mage-error' but never did.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find content: 'Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).' within the selector: '.mage-error' but never did.\n    at SignupPage.alertInvalidRequiredField (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:326:41)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:213:25)",
+                "diff": null
+              },
+              "uuid": "ae37cccd-30b1-4035-b70e-e642d48badf9",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate existing taxvat",
+              "fullTitle": "SignUp Page Customer Validate existing taxvat",
+              "timedOut": null,
+              "duration": 14104,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cnpj = '47253900000104';\n_SignupPage.default.fillFormCustomerCompany(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!');",
+              "err": {},
+              "uuid": "6228f0eb-1553-4cef-bb71-d93fdf61f388",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Require Fields",
+              "fullTitle": "SignUp Page Customer Require Fields",
+              "timedOut": null,
+              "duration": 8111,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = '  ';\ncustomer.cpf = '   ';\ncustomer.password = 'xxx';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('Este campo é obrigatório.');\n_SignupPage.default.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.');\n_SignupPage.default.alertInvalidRequiredField('Este campo deve conter 8 ou mais caracteres. Espaços serão ignorados.');",
+              "err": {},
+              "uuid": "a4cd057d-e651-4108-8308-a4184a928bc4",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SignUp Customer Company",
+              "fullTitle": "SignUp Page Customer SignUp Customer Company",
+              "timedOut": null,
+              "duration": 19105,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\n_SignupPage.default.fillFormCustomerCompany(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Obrigado por registrar-se com Obramax.');\ncy.clearCookies();\ncy.clearLocalStorage();",
+              "err": {},
+              "uuid": "52182c74-3575-4103-b9eb-d31c8c81237f",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SignUp Customer",
+              "fullTitle": "SignUp Page Customer SignUp Customer",
+              "timedOut": null,
+              "duration": 8639,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Obrigado por registrar-se com Obramax.');\ncy.clearCookies();\ncy.clearLocalStorage();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `select#legal_type`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `select#legal_type`, but never found it.\n    at SignupPage.fillFormCustomer (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:294:8)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:260:25)",
+                "diff": null
+              },
+              "uuid": "9047ecac-6342-41e6-bcff-39eb7055de1c",
+              "parentUUID": "a20886a1-b365-4cfe-94a8-9d5ca1e02122",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6228f0eb-1553-4cef-bb71-d93fdf61f388",
+            "a4cd057d-e651-4108-8308-a4184a928bc4",
+            "52182c74-3575-4103-b9eb-d31c8c81237f"
+          ],
+          "failures": [
+            "6d1db265-3b62-4bea-b0d1-3bd09e92ff59",
+            "469195e7-c6e9-4205-b9be-d6339d627b4b",
+            "8f13e5b6-a2fb-4206-85ac-dd09e9fbb58d",
+            "ae37cccd-30b1-4035-b70e-e642d48badf9",
+            "9047ecac-6342-41e6-bcff-39eb7055de1c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 112796,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

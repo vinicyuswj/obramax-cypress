@@ -1,0 +1,245 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-08T14:41:21.464Z",
+    "end": "2022-02-08T14:43:10.648Z",
+    "duration": 109184,
+    "testsRegistered": 8,
+    "passPercent": 87.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "dd9e23ba-d103-4b64-90db-194744a6cc6a",
+      "title": "",
+      "fullFile": "cypress/integration/signupCustomer.spec.js",
+      "file": "cypress/integration/signupCustomer.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "519aa333-9630-49d8-9b52-079320ddab1b",
+          "title": "SignUp Page Customer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Validate existing document",
+              "fullTitle": "SignUp Page Customer Validate existing document",
+              "timedOut": null,
+              "duration": 15396,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cpf = '67251817837';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!');",
+              "err": {},
+              "uuid": "e6d227d8-ccfe-4ada-a338-e7bf2ff65a11",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate existing e-mail",
+              "fullTitle": "SignUp Page Customer Validate existing e-mail",
+              "timedOut": null,
+              "duration": 22922,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = 'qa@creditoonline.com.br';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Já existe uma conta com este endereço de e-mail. Se você tem certeza que é o seu endereço de e-mail,  clique aqui para obter sua senha e acessar a sua conta.');",
+              "err": {},
+              "uuid": "71136aa2-7290-489b-a0a8-728ed87ba3f8",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Incorrect document",
+              "fullTitle": "SignUp Page Customer Incorrect document",
+              "timedOut": null,
+              "duration": 11458,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cpf = 'AAAx481255@AAAAAAA';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.');",
+              "err": {},
+              "uuid": "5f21f9a0-bc5a-4b83-87df-fce932b5fbb2",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Incorrect email",
+              "fullTitle": "SignUp Page Customer Incorrect email",
+              "timedOut": null,
+              "duration": 8989,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = 'obramax.com.br';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).');",
+              "err": {},
+              "uuid": "5c5b0e74-c77a-4ee5-9be4-38d2a874e0bc",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate existing taxvat",
+              "fullTitle": "SignUp Page Customer Validate existing taxvat",
+              "timedOut": null,
+              "duration": 15157,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.cnpj = '47253900000104';\n_SignupPage.default.fillFormCustomerCompany(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!');",
+              "err": {},
+              "uuid": "469996dd-4b23-4c31-af2f-ba9a3731d738",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Require Fields",
+              "fullTitle": "SignUp Page Customer Require Fields",
+              "timedOut": null,
+              "duration": 5229,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\ncustomer.email = '  ';\ncustomer.cpf = '   ';\ncustomer.password = 'xxx';\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.submit();\n_SignupPage.default.alertInvalidRequiredField('Este campo é obrigatório.');\n_SignupPage.default.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.');\n_SignupPage.default.alertInvalidRequiredField('Este campo deve conter 8 ou mais caracteres. Espaços serão ignorados.');",
+              "err": {},
+              "uuid": "b666d5ff-720b-4a65-8285-b2425ad19e3b",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SignUp Customer Company",
+              "fullTitle": "SignUp Page Customer SignUp Customer Company",
+              "timedOut": null,
+              "duration": 20842,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\n_SignupPage.default.fillFormCustomerCompany(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Obrigado por registrar-se com Obramax.');\ncy.clearCookies();\ncy.clearLocalStorage();",
+              "err": {},
+              "uuid": "38777bda-752d-442b-a507-d070123777c7",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "SignUp Customer",
+              "fullTitle": "SignUp Page Customer SignUp Customer",
+              "timedOut": null,
+              "duration": 8790,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SignupFactory.default.customer();\n_SignupPage.default.fillFormCustomer(customer);\n_SignupPage.default.submit();\n_SignupPage.default.alertMessageShouldBe('Obrigado por registrar-se com Obramax.');\ncy.clearCookies();\ncy.clearLocalStorage();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `input#firstname`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 6000ms: Expected to find element: `input#firstname`, but never found it.\n    at SignupPage.fillFormCustomer (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:294:8)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/signupCustomer.spec.js:260:25)",
+                "diff": null
+              },
+              "uuid": "f5388fb1-b1a1-4694-95be-85872cdd0672",
+              "parentUUID": "519aa333-9630-49d8-9b52-079320ddab1b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e6d227d8-ccfe-4ada-a338-e7bf2ff65a11",
+            "71136aa2-7290-489b-a0a8-728ed87ba3f8",
+            "5f21f9a0-bc5a-4b83-87df-fce932b5fbb2",
+            "5c5b0e74-c77a-4ee5-9be4-38d2a874e0bc",
+            "469996dd-4b23-4c31-af2f-ba9a3731d738",
+            "b666d5ff-720b-4a65-8285-b2425ad19e3b",
+            "38777bda-752d-442b-a507-d070123777c7"
+          ],
+          "failures": [
+            "f5388fb1-b1a1-4694-95be-85872cdd0672"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 108783,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

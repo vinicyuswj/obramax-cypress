@@ -6,7 +6,7 @@ class SigninPage {
   }
 
   waitRequest(){
-    cy.intercept(' /customer/section/**').as('login')
+    cy.intercept('/customer/section/**').as('login')
     cy.wait('@login')
   }
 
@@ -29,6 +29,10 @@ class SigninPage {
 
   requiredFieldShouldBe(message){
     cy.contains('.mage-error', message).should('be.visible')
+  }
+
+  usernameLoggedShouldBeVisible(name){
+    cy.get('.header-webjump .panel ul li span.logged-in').should('have.text', name)
   }
 }
 

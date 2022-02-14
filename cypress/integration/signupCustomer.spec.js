@@ -6,17 +6,9 @@ import signupFactory from '../factories/SignupFactory'
 describe('SignUp Page Customer', () => {
 
   beforeEach(() => {
-    signup.acessForm()
-  })
-
-  it('SignUp Customer', () => {
-    var customer = signupFactory.customer()
-
-    signup.fillFormCustomer(customer)
-    signup.submit()
-    signup.alertMessageShouldBe('Obrigado por registrar-se com Obramax.')
     cy.clearCookies()
     cy.clearLocalStorage()
+    signup.acessForm()
   })
 
   it('Validate existing document', () => {
@@ -39,7 +31,7 @@ describe('SignUp Page Customer', () => {
 
   it('Incorrect document', () => {
     var customer = signupFactory.customer()
-    customer.cpf = 'AAAx481255@'
+    customer.cpf = 'AAAx481255@AAAAAAA'
 
     signup.fillFormCustomer(customer)
     signup.submit()
@@ -54,6 +46,15 @@ describe('SignUp Page Customer', () => {
     signup.fillFormCustomer(customer)
     signup.submit()
     signup.alertInvalidRequiredField('Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).')
+  })
+
+  it('Validate existing taxvat', () => {
+    var customer = signupFactory.customer()
+    customer.cnpj = '47253900000104'
+
+    signup.fillFormCustomerCompany(customer)
+    signup.submit()
+    signup.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!')
   })
 
   it('Require Fields', () => {
@@ -76,16 +77,13 @@ describe('SignUp Page Customer', () => {
     signup.fillFormCustomerCompany(customer)
     signup.submit()
     signup.alertMessageShouldBe('Obrigado por registrar-se com Obramax.')
-    cy.clearCookies()
-    cy.clearLocalStorage()
   })
 
-  it('Validate existing taxvat', () => {
+  it('SignUp Customer', () => {
     var customer = signupFactory.customer()
-    customer.cnpj = '47253900000104'
 
-    signup.fillFormCustomerCompany(customer)
+    signup.fillFormCustomer(customer)
     signup.submit()
-    signup.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!')
+    signup.alertMessageShouldBe('Obrigado por registrar-se com Obramax.')
   })
 })

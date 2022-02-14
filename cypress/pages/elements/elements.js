@@ -5,5 +5,8 @@ export const ELEMENTS = {
     },
     signup: {
         
+    },
+    cart: {
+
     }
 }
