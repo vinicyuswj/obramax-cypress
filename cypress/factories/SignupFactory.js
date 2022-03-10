@@ -12,7 +12,7 @@ export default {
       lastName: lastName,
       fullName: fullName,
       cpf: cpf.generate(),
-      cnpj: faker.br.cnpj(),
+      cnpj: faker.br.cnpj(), 
       companyName: fullName,
       email: faker.internet.email(fullName),
       phone: '11971459635',

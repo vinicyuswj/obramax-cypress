@@ -1,0 +1,207 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-02-21T20:01:21.177Z",
+    "end": "2022-02-21T20:02:19.345Z",
+    "duration": 58168,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4bdd5c84-7f78-4e33-bf29-4f2b40a2619f",
+      "title": "",
+      "fullFile": "cypress/integration/ec/signinCustomer.spec.js",
+      "file": "cypress/integration/ec/signinCustomer.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+          "title": "EC - SignIn Page Customer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with email",
+              "fullTitle": "EC - SignIn Page Customer Login with email",
+              "timedOut": null,
+              "duration": 11240,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {},
+              "uuid": "70fab90b-a283-422b-99df-a1e65d96fe50",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with CPF",
+              "fullTitle": "EC - SignIn Page Customer Login with CPF",
+              "timedOut": null,
+              "duration": 11762,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = '67251817837';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {},
+              "uuid": "06ae8b57-3ae3-4873-9bdc-253f88af8914",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with CNPJ",
+              "fullTitle": "EC - SignIn Page Customer Login with CNPJ",
+              "timedOut": null,
+              "duration": 9870,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = '47253900000104';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {
+                "message": "CypressError: Timed out retrying after 6000ms: `cy.wait()` timed out waiting `6000ms` for the 1st request to the route: `login`. No request ever occurred.\n\nhttps://on.cypress.io/wait",
+                "estack": "CypressError: Timed out retrying after 6000ms: `cy.wait()` timed out waiting `6000ms` for the 1st request to the route: `login`. No request ever occurred.\n\nhttps://on.cypress.io/wait\n    at cypressErr (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:175967:18)\n    at Object.errByPath (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:176036:10)\n    at checkForXhr (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:162212:92)\n    at https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:162235:28\n    at tryCatcher (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:13196:23)\n    at Function.Promise.attempt.Promise.try (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:10470:29)\n    at whenStable (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:168438:63)\n    at https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:167935:14\n    at tryCatcher (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:13196:23)\n    at Promise._settlePromiseFromHandler (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:11131:31)\n    at Promise._settlePromise (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:11188:18)\n    at Promise._settlePromise0 (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:11233:10)\n    at Promise._settlePromises (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:11313:18)\n    at Promise._fulfill (https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:11257:18)\n    at https://homolog.obramax.com.br/__cypress/runner/cypress_runner.js:12871:46\nFrom Your Spec Code:\n    at SigninPage.waitRequest (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/ec/signinCustomer.spec.js:272:8)\n    at Context.eval (https://homolog.obramax.com.br/__cypress/tests?p=cypress/integration/ec/signinCustomer.spec.js:196:25)",
+                "diff": null
+              },
+              "uuid": "8ff7b893-fd72-41b7-a644-47bb34962119",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect email",
+              "fullTitle": "EC - SignIn Page Customer Login with incorrect email",
+              "timedOut": null,
+              "duration": 8157,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = 'obramax@teste.com'; // signin.waitRequest()\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.alertMessageShouldBe('O login da conta esta incorreto ou sua conta foi desativada temporariamente. Aguarde e tente novamente mais tarde.');",
+              "err": {},
+              "uuid": "28f9fa6d-b741-4ef6-ab8d-227d0edc216c",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect password",
+              "fullTitle": "EC - SignIn Page Customer Login with incorrect password",
+              "timedOut": null,
+              "duration": 11216,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.password = 'xxxxxxxxxx222'; // signin.waitRequest()\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.alertMessageShouldBe('O login da conta esta incorreto ou sua conta foi desativada temporariamente. Aguarde e tente novamente mais tarde.');",
+              "err": {},
+              "uuid": "887ff4cc-c95d-4caf-9806-6aa0c9b4c6d5",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with required fields empty",
+              "fullTitle": "EC - SignIn Page Customer Login with required fields empty",
+              "timedOut": null,
+              "duration": 5383,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.password = ' ';\ncustomer.username = ' '; // signin.waitRequest()\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.requiredFieldShouldBe('Este campo é obrigatório.');",
+              "err": {},
+              "uuid": "dd8205e3-68f2-40d9-aaaa-007629f40cdf",
+              "parentUUID": "1298e774-fc5b-4c89-a23c-f4ddc77b937e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "70fab90b-a283-422b-99df-a1e65d96fe50",
+            "06ae8b57-3ae3-4873-9bdc-253f88af8914",
+            "28f9fa6d-b741-4ef6-ab8d-227d0edc216c",
+            "887ff4cc-c95d-4caf-9806-6aa0c9b4c6d5",
+            "dd8205e3-68f2-40d9-aaaa-007629f40cdf"
+          ],
+          "failures": [
+            "8ff7b893-fd72-41b7-a644-47bb34962119"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 57628,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

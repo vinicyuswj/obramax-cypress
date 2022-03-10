@@ -1,0 +1,202 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-15T16:21:47.014Z",
+    "end": "2022-02-15T16:23:06.696Z",
+    "duration": 79682,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "5f5d1f3a-cf60-45f6-ab55-1eb2d56b29c5",
+      "title": "",
+      "fullFile": "cypress/integration/signinCustomer.spec.js",
+      "file": "cypress/integration/signinCustomer.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+          "title": "SignIn Page Customer",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Login with email",
+              "fullTitle": "SignIn Page Customer Login with email",
+              "timedOut": null,
+              "duration": 16390,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {},
+              "uuid": "8a03c6fc-0ca4-4917-ae90-8977fed31bb8",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with CPF",
+              "fullTitle": "SignIn Page Customer Login with CPF",
+              "timedOut": null,
+              "duration": 17807,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = '67251817837';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {},
+              "uuid": "8ba8df2f-a6f3-4faf-a5c0-9737c3bd12b7",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with CNPJ",
+              "fullTitle": "SignIn Page Customer Login with CNPJ",
+              "timedOut": null,
+              "duration": 15570,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = '47253900000104';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.loginSuccessfully();\n_SigninPage.default.usernameLoggedShouldBeVisible('Olá, Usuário!');",
+              "err": {},
+              "uuid": "36554590-70c7-4d67-83f9-cc8d232206a6",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect email",
+              "fullTitle": "SignIn Page Customer Login with incorrect email",
+              "timedOut": null,
+              "duration": 13076,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.username = 'obramax@teste.com';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.alertMessageShouldBe('O login da conta esta incorreto ou sua conta foi desativada temporariamente. Aguarde e tente novamente mais tarde.');",
+              "err": {},
+              "uuid": "b77406ab-ee35-4feb-9f55-35a15f9aaefa",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with incorrect password",
+              "fullTitle": "SignIn Page Customer Login with incorrect password",
+              "timedOut": null,
+              "duration": 10614,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.password = 'xxxxxxxxxx222';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.waitRequest();\n_SigninPage.default.alertMessageShouldBe('O login da conta esta incorreto ou sua conta foi desativada temporariamente. Aguarde e tente novamente mais tarde.');",
+              "err": {},
+              "uuid": "6aeac9e1-d4fa-455d-93d8-f8452ff68cf1",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login with required fields empty",
+              "fullTitle": "SignIn Page Customer Login with required fields empty",
+              "timedOut": null,
+              "duration": 5719,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "var customer = _SigninFactory.default.customer();\ncustomer.password = ' ';\ncustomer.username = ' ';\n_SigninPage.default.waitRequest();\n_SigninPage.default.authentication(customer);\n_SigninPage.default.submit();\n_SigninPage.default.requiredFieldShouldBe('Este campo é obrigatório.');",
+              "err": {},
+              "uuid": "0d3a030a-6892-4c66-a138-45a0f521361a",
+              "parentUUID": "de1397f4-c242-4d4f-ad12-91b208f170a2",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8a03c6fc-0ca4-4917-ae90-8977fed31bb8",
+            "8ba8df2f-a6f3-4faf-a5c0-9737c3bd12b7",
+            "36554590-70c7-4d67-83f9-cc8d232206a6",
+            "b77406ab-ee35-4feb-9f55-35a15f9aaefa",
+            "6aeac9e1-d4fa-455d-93d8-f8452ff68cf1",
+            "0d3a030a-6892-4c66-a138-45a0f521361a"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 79176,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

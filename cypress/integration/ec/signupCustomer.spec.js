@@ -1,9 +1,9 @@
 /// <reference types="cypress" />
 
-import signup from '../pages/SignupPage'
-import signupFactory from '../factories/SignupFactory'
+import signup from '../../pages/SignupPage'
+import signupFactory from '../../factories/SignupFactory'
 
-describe('SignUp Page Customer', () => {
+describe('EC - SignUp Page Customer', () => {
 
   beforeEach(() => {
     cy.clearCookies()

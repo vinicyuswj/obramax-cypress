@@ -1,8 +1,8 @@
 /// <reference types="cypress" />
 
-import cart from '../pages/CartPage'
+import cart from '../../pages/CartPage'
 
-describe('Cart Page', () => {
+describe('EC - Cart Page', () => {
 
   beforeEach(() => {
     cy.visit('/')
@@ -67,12 +67,11 @@ describe('Cart Page', () => {
     cart.validateEmptyCart()
   })
 
-  it.only('Validate option to add items to quote', () => {
+  it('Validate option to add items to quote', () => {
     cart.addCart()
     cart.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ')
     cart.goCart()
     cy.wait(3000)
     cart.validateButtonWishlist()
-
   })
 })

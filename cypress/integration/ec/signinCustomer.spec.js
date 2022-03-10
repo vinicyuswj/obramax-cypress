@@ -1,10 +1,12 @@
 /// <reference types="cypress" />
-import signin from '../pages/SigninPage'
-import signinFactory from '../factories/SigninFactory'
+import signin from '../../pages/SigninPage'
+import signinFactory from '../../factories/SigninFactory'
 
-describe('SignIn Page Customer', () => {
+describe('EC - SignIn Page Customer', () => {
 
   beforeEach(() => {
+    cy.clearLocalStorage()
+    cy.clearCookies()
     signin.accessLogin()
   })
 
@@ -47,7 +49,7 @@ describe('SignIn Page Customer', () => {
     var customer = signinFactory.customer()
     customer.username = 'obramax@teste.com'
 
-    signin.waitRequest()
+    // signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.alertMessageShouldBe('O login da conta esta incorreto ou sua conta foi desativada temporariamente. Aguarde e tente novamente mais tarde.')
@@ -57,7 +59,7 @@ describe('SignIn Page Customer', () => {
     var customer = signinFactory.customer()
     customer.password = 'xxxxxxxxxx222'
 
-    signin.waitRequest()
+    // signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.waitRequest()
@@ -69,7 +71,7 @@ describe('SignIn Page Customer', () => {
     customer.password = ' '
     customer.username = ' '
 
-    signin.waitRequest()
+    // signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.requiredFieldShouldBe('Este campo é obrigatório.')

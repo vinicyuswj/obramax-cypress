@@ -1,0 +1,183 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-15T15:43:40.779Z",
+    "end": "2022-02-15T15:46:52.896Z",
+    "duration": 192117,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ac97decc-1881-4c01-8061-8e8ce579d96f",
+      "title": "",
+      "fullFile": "cypress/integration/cart.spec.js",
+      "file": "cypress/integration/cart.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "63b8d973-afac-45b4-b95b-93792c496d9c",
+          "title": "Cart Page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add unit of product items using the \"+\" button",
+              "fullTitle": "Cart Page Add unit of product items using the \"+\" button",
+              "timedOut": null,
+              "duration": 30526,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CartPage.default.addCart();\n_CartPage.default.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ');\n_CartPage.default.goCart();\n_CartPage.default.validateQuantity(1);\n_CartPage.default.plusButton();\n_CartPage.default.plusButton();\n_CartPage.default.updateCart();\n_CartPage.default.validateQuantity(3);\n_CartPage.default.alertUpdateCart('Carrinho atualizado com sucesso!');\n_CartPage.default.unitPrice('R$60,00');\n_CartPage.default.subtotalPrice('R$180,00');\ncy.clearCookies();",
+              "err": {},
+              "uuid": "97631bf3-2d6d-409b-9747-c35f02508f2e",
+              "parentUUID": "63b8d973-afac-45b4-b95b-93792c496d9c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Remove unit of product items using the \"-\" button",
+              "fullTitle": "Cart Page Remove unit of product items using the \"-\" button",
+              "timedOut": null,
+              "duration": 28741,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('/checkout/cart/updatePost').as('updateCart');\n_CartPage.default.inputQtyPageProduct(3);\n_CartPage.default.addCart();\n_CartPage.default.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ');\n_CartPage.default.goCart();\n_CartPage.default.unitPrice('R$60,00');\n_CartPage.default.subtotalPrice('R$180,00');\n_CartPage.default.validateQuantity(3);\n_CartPage.default.minusButton();\n_CartPage.default.minusButton();\n_CartPage.default.updateCart();\ncy.wait('@updateCart');\n_CartPage.default.alertUpdateCart('Carrinho atualizado com sucesso!');\n_CartPage.default.validateQuantity(1);\n_CartPage.default.unitPrice('R$60,00');\n_CartPage.default.subtotalPrice('R$60,00');",
+              "err": {},
+              "uuid": "979136a7-3bdc-4118-977a-ed0059e7e54d",
+              "parentUUID": "63b8d973-afac-45b4-b95b-93792c496d9c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Delete item from cart using trash button",
+              "fullTitle": "Cart Page Delete item from cart using trash button",
+              "timedOut": null,
+              "duration": 42207,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CartPage.default.addCart();\n_CartPage.default.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ');\n_CartPage.default.goCart();\ncy.wait(3000);\n_CartPage.default.buttonTrash();\n_CartPage.default.validateEmptyCart();",
+              "err": {},
+              "uuid": "673915b7-7c70-42db-ac6d-de1e694aef5b",
+              "parentUUID": "63b8d973-afac-45b4-b95b-93792c496d9c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Cart clean",
+              "fullTitle": "Cart Page Cart clean",
+              "timedOut": null,
+              "duration": 57680,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CartPage.default.addCart();\n_CartPage.default.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ');\n_CartPage.default.goCart();\ncy.wait(3000);\n_CartPage.default.clearCart();\n_CartPage.default.validateEmptyCart();",
+              "err": {},
+              "uuid": "209c080b-3c5c-4553-972f-f5f036dbf14f",
+              "parentUUID": "63b8d973-afac-45b4-b95b-93792c496d9c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Validate option to add items to quote",
+              "fullTitle": "Cart Page Validate option to add items to quote",
+              "timedOut": null,
+              "duration": 32647,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "_CartPage.default.addCart();\n_CartPage.default.alertAddProductToCart('Você adicionou Produto TESTE ao carrinho de compras. Se deseja finalizar a compra ');\n_CartPage.default.goCart();\ncy.wait(3000);\n_CartPage.default.validateButtonWishlist();",
+              "err": {},
+              "uuid": "301f6536-ab09-4f58-9c31-b7087abe2057",
+              "parentUUID": "63b8d973-afac-45b4-b95b-93792c496d9c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "97631bf3-2d6d-409b-9747-c35f02508f2e",
+            "979136a7-3bdc-4118-977a-ed0059e7e54d",
+            "673915b7-7c70-42db-ac6d-de1e694aef5b",
+            "209c080b-3c5c-4553-972f-f5f036dbf14f",
+            "301f6536-ab09-4f58-9c31-b7087abe2057"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 191801,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}

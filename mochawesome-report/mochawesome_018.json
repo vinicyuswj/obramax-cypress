@@ -1,0 +1,107 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-02-21T19:34:44.050Z",
+    "end": "2022-02-21T19:34:55.927Z",
+    "duration": 11877,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "91fff9d9-e21f-42c5-8e5f-96e60059e3a5",
+      "title": "",
+      "fullFile": "cypress/integration/ec/address.spec.js",
+      "file": "cypress/integration/ec/address.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "baee83b4-2725-465d-8ffc-3c8cfddaf973",
+          "title": "EC - Address",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Add additional address as default billing",
+              "fullTitle": "EC - Address Add additional address as default billing",
+              "timedOut": null,
+              "duration": 11701,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.intercept('**/customer/address/').as('address');\ncy.get('.nav .nav#customer-address').click();\ncy.wait('@address'); // cy.contains('.actions-toolbar .primary button span', 'Adicionar Novo Endereço').click()\ncy.get('.actions-toolbar .primary button.action[title=\"Adicionar Novo Endereço\"]').click(); // cy.contains('Adicionar Novo Endereço').click({force: true})",
+              "err": {},
+              "uuid": "805f63e2-8ac5-47af-bef8-ff0c1ae5f9dd",
+              "parentUUID": "baee83b4-2725-465d-8ffc-3c8cfddaf973",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "805f63e2-8ac5-47af-bef8-ff0c1ae5f9dd"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 11701,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.0.1"
+    },
+    "marge": {
+      "options": {
+        "id": "default",
+        "reportDir": "mochawesome-report",
+        "quiet": true,
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.0.1"
+    }
+  }
+}
