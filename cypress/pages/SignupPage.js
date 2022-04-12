@@ -35,7 +35,7 @@ class SignupPage {
   }
 
   alertMessageShouldBe(message){
-    cy.get('main div[class="page messages"] div div div div').should('have.text', message)
+    cy.get('.page-wrapper').should('contain', message)
   }
 
   alertInvalidRequiredField(message){

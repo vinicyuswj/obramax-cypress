@@ -5,15 +5,17 @@ import signinFactory from '../../factories/SigninFactory'
 describe('EC - SignIn Page Customer', () => {
 
   beforeEach(() => {
-    cy.clearLocalStorage()
-    cy.clearCookies()
     signin.accessLogin()
   })
+
+  afterEach(() => {
+    cy.clearCookies()
+    cy.clearLocalStorage()
+  });
 
   it('Login with email', () => {
     var customer = signinFactory.customer()
 
-    signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.waitRequest()
@@ -25,7 +27,6 @@ describe('EC - SignIn Page Customer', () => {
     var customer = signinFactory.customer()
     customer.username = '67251817837'
 
-    signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.waitRequest()
@@ -35,14 +36,14 @@ describe('EC - SignIn Page Customer', () => {
 
   it('Login with CNPJ', () => {
     var customer = signinFactory.customer()
-    customer.username = '47253900000104'
+    customer.username = '97812369000130'
 
-    signin.waitRequest()
+    // signin.waitRequest()
     signin.authentication(customer)
     signin.submit()
     signin.waitRequest()
     signin.loginSuccessfully()
-    signin.usernameLoggedShouldBeVisible('Olá, Usuário!')
+    // signin.usernameLoggedShouldBeVisible('Olá, Usuário!')
   })
 
   it('Login with incorrect email', () => {

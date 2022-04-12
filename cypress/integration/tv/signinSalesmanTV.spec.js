@@ -4,6 +4,8 @@ import salesmanFactory from '../../factories/SalesmanFactory'
 
 describe('TV - SignIn Page Salesman', () => {
     beforeEach(() => {
+        cy.clearCookies()
+        cy.clearLocalStorage()
         cy.visit('/tv')
       })
 

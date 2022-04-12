@@ -6,10 +6,13 @@ import signupFactory from '../../factories/SignupFactory'
 describe('EC - SignUp Page Customer', () => {
 
   beforeEach(() => {
-    cy.clearCookies()
-    cy.clearLocalStorage()
     signup.acessForm()
   })
+
+  afterEach(() => {
+    cy.clearCookies()
+    cy.clearLocalStorage()
+  });
 
   it('Validate existing document', () => {
     var customer = signupFactory.customer()
@@ -35,7 +38,7 @@ describe('EC - SignUp Page Customer', () => {
 
     signup.fillFormCustomer(customer)
     signup.submit()
-    signup.alertInvalidRequiredField('O CPF/CNPJ informado não é um CPF/CNPJ válido.')
+    signup.alertMessageShouldBe('O CPF/CNPJ informado não é um CPF/CNPJ válido.')
 
   })
 
@@ -45,10 +48,10 @@ describe('EC - SignUp Page Customer', () => {
 
     signup.fillFormCustomer(customer)
     signup.submit()
-    signup.alertInvalidRequiredField('Por favor, insira um email válido (Ex: joaoninguem@dominio.com.br).')
+    signup.alertMessageShouldBe('"Email" não é um endereço de email válido')
   })
 
-  it('Validate existing taxvat', () => {
+  it.only('Validate existing taxvat', () => {
     var customer = signupFactory.customer()
     customer.cnpj = '47253900000104'
 
@@ -57,7 +60,7 @@ describe('EC - SignUp Page Customer', () => {
     signup.alertMessageShouldBe('Este CPF/CNPJ já foi usado em outro cadastro desta loja!')
   })
 
-  it('Require Fields', () => {
+  it.skip('Require Fields', () => {
     var customer = signupFactory.customer()
     customer.email = '  '
     customer.cpf = '   '
